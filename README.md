@@ -11,7 +11,7 @@ $ lua build.lua PATH_TO_LIBRARY
 ```
 
 ### Installing an LPKG file
-To an install a Lua Package you'll have to put the LPKG file inside of `./Import/packages/`
+To install a Lua Package you'll have to put the LPKG file inside of `./Import/packages/`
 
 ### Importing an LPKG file
 ```lua
