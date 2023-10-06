@@ -47,14 +47,13 @@ local loadfile = io and lua_loadfile or loadfile or empty_read
 local readfile = readfile or io and lua_readfile or empty_read
 local writefile = writefile or io and lua_writefile or empty_read
 
-local struct = loadfile("/Import/libs/struct.lua")
-
-if(type(struct) == "function") then struct = struct() end
+local struct = loadfile("/Import/libs/struct.lua")()
 
 local Import = {
-    PackageExtension = "lpkg",
+    packageExtension = "lpkg",
+    loadedPackages = {},
     Load = function(self, package)
-        local package_bytes = readfile(string.format("/Import/packages/%s.%s", package, self.PackageExtension))
+        local package_bytes = readfile(string.format("/Import/packages/%s.%s", package, self.packageExtension))
         local offset = 3
 
         local name_size, version_size = struct.unpack("bb", package_bytes)
@@ -69,6 +68,14 @@ local Import = {
             __version__ = version
         }
 
+        local loaded = self.loadedPackages[name]
+
+        if loaded then
+            if loaded.__version__ ~= result.__version__ then loaded = result end
+            
+            return loaded
+        end
+
         while true do
             local bytes = string.sub(package_bytes, offset, #package_bytes)
 
@@ -81,6 +88,8 @@ local Import = {
 
             result[key] = load(bytecode)()
         end
+
+        self.loadedPackages[name] = result
 
         return result
     end
