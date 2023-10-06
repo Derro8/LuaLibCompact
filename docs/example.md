@@ -6,10 +6,9 @@ To explain it the best I can I'm going to be illustrating how you'd go about mak
 
 ```
 .
-└── Library Folder
-      ├── source
-      |    └── main.lua 
-      └── manifest.json
+├── source
+|    └── main.lua 
+└── manifest.json
 
 ```
 
