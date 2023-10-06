@@ -3,8 +3,8 @@
 ### Building a LPKG file from a library folder.
 ------
 ```
-$ cd ./Import
-$ lua build.lua PROJECT_ROOT
+  $ cd ./Import
+  $ lua build.lua PROJECT_ROOT
 ```
 
 ### Installing an LPKG file
