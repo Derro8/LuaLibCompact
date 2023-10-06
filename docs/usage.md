@@ -4,7 +4,7 @@
 ------
 ```
 $ cd ./Import
-$ lua build.lua PATH_TO_LIBRARY
+$ lua build.lua PROJECT_ROOT
 ```
 
 ### Installing an LPKG file
