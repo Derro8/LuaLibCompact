@@ -30,7 +30,7 @@ To explain it the best I can I'm going to be illustrating how you'd go about mak
 ```
 
 ## "main.lua" Example
-```
+```lua
 local TestApi = {}
 
 TestApi.Add = function(a, b)
