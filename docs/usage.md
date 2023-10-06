@@ -16,7 +16,10 @@ To install a Lua Package you'll have to put the LPKG file inside of `./Import/pa
 ```lua
 local import = require "import"
 
-local library = import:Load("TestAPI")
+local math = import:loadFrom("TestAPI", "math")
+local testAPI = import:Load("TestAPI") 
 
-print(library.math.add(5, 5))
+print(testAPI.math == math)
+
+print(math.add(5, 5))
 ```
