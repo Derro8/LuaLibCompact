@@ -8,7 +8,7 @@
 | Version Size  | 0x01  |
 | Name | Name Size |
 | Version | Version Size |
-| Scripts Format | indefinite |
+| [Scripts](#scripts) | indefinite |
 
 ## Scripts
 
