@@ -2,7 +2,7 @@
 Compact your libraries into an "LPKG" format.
 
 ### Installation
-
+-------------
 ```
   $ git clone https://github.com/Derro8/LuaLibCompact.git
 ```
