@@ -21,7 +21,7 @@ To explain it the best I can I'm going to be illustrating how you'd go about mak
     },
     "data": [
         {
-            "name": "test",
+            "name": "math",
             "script": "source/main.lua"
         }
     ]
@@ -32,7 +32,7 @@ To explain it the best I can I'm going to be illustrating how you'd go about mak
 ```lua
 local TestApi = {}
 
-TestApi.Add = function(a, b)
+TestApi.add = function(a, b)
     return a + b
 end
 
