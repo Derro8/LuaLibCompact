@@ -71,9 +71,9 @@ local Import = {
         local loaded = self.loadedPackages[name]
 
         if loaded then
-            if loaded.__version__ ~= result.__version__ then loaded = result end
-            
-            return loaded
+            if loaded.__version__ == result.__version__ then
+                return loaded
+            end
         end
 
         while true do
