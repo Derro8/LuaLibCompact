@@ -3,7 +3,7 @@
 To explain it the best I can I'm going to be illustrating how you'd go about making a library.
 
 ## Folder Structure
-
+or see the [TestAPI](../example/TestAPI)
 ```
 .
 ├── source
