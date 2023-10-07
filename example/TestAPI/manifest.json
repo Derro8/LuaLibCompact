@@ -1,0 +1,12 @@
+{
+    "meta": {
+        "title": "TestAPI",
+        "version": "0.0.1"
+    },
+    "data": [
+        {
+            "name": "math",
+            "script": "source/main.lua"
+        }
+    ]
+}
